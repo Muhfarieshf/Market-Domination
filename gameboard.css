@@ -1,0 +1,461 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 98vh 1fr;
+  grid-template-rows: 98vh;
+  background-color: #3A76C5;
+}
+
+.sides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#play1disp,
+#play2disp {
+  background-color: #81D4FA;
+  padding: 3vmin;
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 90vmin;
+  margin: 5vmin;
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+#play3disp {
+  background-color: #81D4FA;
+  padding: 3vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 90vmin;
+  margin: 5vmin;
+  padding-bottom: 100px;
+  gap: 1.5 vmin;
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+#play4disp {
+  background-color: #81D4FA;
+  padding: 3vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 90vmin;
+  margin: 5vmin;
+  right: 500px;
+  padding-bottom: 100px;
+  gap: 1.5vmin;
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+.btns {
+  height: 5vmin;
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+  background-color: #3A76C5;
+  border: 0;
+  border-radius: 0;
+}
+
+.btnBar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2vmin;
+}
+
+.btns,
+#ply1SubName,
+#ply2SubName,
+#ply3SubName,
+#ply4SubName {
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+  background-color: #3A76C5;
+  border-radius: 0;
+  border: 0;
+  padding: 10px;
+}
+
+#ply1Input,
+#ply2Input,
+#ply3Input,
+#ply4Input {
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+  background-color: white;
+  border-radius: 0;
+  border: 0;
+  padding: 10px;
+}
+
+.plyTitle {
+  font-size: 5.5vmin;
+}
+
+.bankDisp,
+.handTitle,
+.totValDisp {
+  font-size: 3vmin;
+}
+
+.handDisp {
+  font-size: 2vmin;
+}
+
+.handDisp {
+  margin-top: 0;
+}
+
+.handTitle {
+  margin-bottom: 0;
+}
+
+.rollBtns {
+  margin-top: 2vmin;
+  font-size: 2vmin;
+}
+
+.nameInput {
+  margin-top: 0;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: 1fr 69vh 1fr;
+  grid-template-rows: 1fr 69vh 1fr;
+  border: 0.15vh solid black;
+}
+
+#boardCenter {
+  border: 0.15vh solid black;
+  background-image: url('resources/marketdomination.png');
+  background-size: cover;
+}
+
+.tbSides {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.lrSides {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.spaces {
+  border: 0.15vh solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#boardCenter {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6vh 6vh 1fr 30vh 1fr 6vh 6vh;
+}
+
+.token {
+  background-color: rgb(180, 179, 179);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(126, 126, 126),
+    rgb(247, 247, 247)
+  );
+  padding: 0.3vh;
+  font-size: 2.5vh;
+  border: 0.15vh solid black;
+  border-radius: 0.5vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#diceCont {
+  display: flex;
+  justify-content: center;
+}
+
+#firstDice {
+  width: 6vh;
+  background-image: url('resources/dice1.png');
+  background-size: cover;
+  margin: 0 1vmin;
+  opacity: 0;
+}
+#secDice {
+  width: 6vh;
+  background-image: url('resources/dice1.png');
+  background-size: cover;
+  margin: 0 1vmin;
+  opacity: 0;
+}
+
+#noticeCont {
+  display: flex;
+  justify-content: center;
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+#noticeBox {
+  background-color: #81D4FA;
+  height: 30vh;
+  width: 45vh;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3vh;
+  opacity: 0;
+}
+
+#yesBtn,
+#clearCardBtn,
+#noBtn {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  background-color: #0F2F76;
+  border: 0;
+  padding: 10px;
+  width: 70px;
+}
+
+
+#aCont {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #81D4FA;
+}
+
+#aCont h4 {
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+a {
+  color: black;
+  background-color: white;
+  font-size: 1.4vmin;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2vmin;
+  max-width: 20vmin;
+  padding: 0 1vmin;
+}
+a:hover {
+  color: red;
+}
+
+#go {
+  background-image: url('resources/0.png.jpeg');
+  background-size: cover;
+}
+
+#s1 {
+  background-image: url('resources/1.png.jpeg');
+  background-size: cover;
+}
+
+#s2 {
+  background-image: url('resources/cc.jpg');
+  background-size: cover;
+}
+
+#s3 {
+  background-image: url('resources/3.png.jpeg');
+  background-size: cover;
+}
+
+#s4 {
+  background-image: url('resources/4.png.jpeg');
+  background-size: cover;
+}
+
+#s5 {
+  background-image: url('resources/5.png.jpeg');
+  background-size: cover;
+}
+
+#s6 {
+  background-image: url('resources/6.png.jpeg');
+  background-size: cover;
+}
+
+#s7 {
+  background-image: url('resources/7.png.jpeg');
+  background-size: cover;
+}
+
+#s8 {
+  background-image: url('resources/8.png.jpeg');
+  background-size: cover;
+}
+
+#s9 {
+  background-image: url('resources/9.png.jpeg');
+  background-size: cover;
+}
+
+#jail {
+  background-image: url('resources/10.png.jpeg');
+  background-size: cover;
+}
+
+#s11 {
+  background-image: url('resources/11.png.jpeg');
+  background-size: cover;
+}
+
+#s12 {
+  background-image: url('resources/12.png.jpeg');
+  background-size: cover;
+}
+
+#s13 {
+  background-image: url('resources/13.png.jpeg');
+  background-size: cover;
+}
+
+#s14 {
+  background-image: url('resources/14.png.jpeg');
+  background-size: cover;
+}
+
+#s15 {
+  background-image: url('resources/15.png.jpeg');
+  background-size: cover;
+}
+
+#s16 {
+  background-image: url('resources/16.png.jpeg');
+  background-size: cover;
+}
+
+#s17 {
+  background-image: url('resources/17.png.jpeg');
+  background-size: cover;
+}
+
+#s18 {
+  background-image: url('resources/18.png.jpeg');
+  background-size: cover;
+}
+
+#s19 {
+  background-image: url('resources/19.png.jpeg');
+  background-size: cover;
+}
+
+#freePark {
+  background-image: url('resources/freePark.jpg');
+  background-size: cover;
+}
+
+#s21 {
+  background-image: url('resources/21.png.jpeg');
+  background-size: cover;
+}
+
+#s22 {
+  background-image: url('resources/22.png.jpeg');
+  background-size: cover;
+}
+
+#s23 {
+  background-image: url('resources/23.png.jpeg');
+  background-size: cover;
+}
+
+#s24 {
+  background-image: url('resources/24.png.jpeg');
+  background-size: cover;
+}
+
+#s25 {
+  background-image: url('resources/25.png.jpeg');
+  background-size: cover;
+}
+
+#s26 {
+  background-image: url('resources/26.png.jpeg');
+  background-size: cover;
+}
+
+#s27 {
+  background-image: url('resources/27.png.jpeg');
+  background-size: cover;
+}
+
+#s28 {
+  background-image: url('resources/28.png.jpeg');
+  background-size: cover;
+}
+
+#s29 {
+  background-image: url('resources/29.png.jpeg');
+  background-size: cover;
+}
+
+#goJail {
+  background-image: url('resources/gotojail.png.jpeg');
+  background-size: cover;
+}
+
+#s31 {
+  background-image: url('resources/31.png.jpeg');
+  background-size: cover;
+}
+
+#s32 {
+  background-image: url('resources/32.png.jpeg');
+  background-size: cover;
+}
+
+#s33 {
+  background-image: url('resources/33.png.jpeg');
+  background-size: cover;
+}
+
+#s34 {
+  background-image: url('resources/34.png.jpeg');
+  background-size: cover;
+}
+
+#s35 {
+  background-image: url('resources/35.png.jpeg');
+  background-size: cover;
+}
+
+#s36 {
+  background-image: url('resources/36.png.jpeg');
+  background-size: cover;
+}
+
+#s37 {
+  background-image: url('resources/37.png.jpeg');
+  background-size: cover;
+}
+
+#s38 {
+  background-image: url('resources/38.png.jpeg');
+  background-size: cover;
+}
+
+#s39 {
+  background-image: url('resources/39.png.jpeg');
+  background-size: cover;
+}

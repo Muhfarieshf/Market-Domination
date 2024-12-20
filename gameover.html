@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Domination</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="gameover.css">
+</head>
+<body>
+
+  <iframe src="music.html" style="display:none;" id="music-frame"></iframe>
+  
+  <section>
+    <img src="resources/gameover.png">
+  </section>
+  <section id="winnerLine">
+    <div id="winnerWords"><span id="winnerDisp"></span> wins!</div>
+  </section>
+  <section id="playAgainBtn">
+    <a href="index.html">
+      <h2>PLAY AGAIN</h2>
+    </a>
+  </section>
+  <script>
+    let text = window.location.hash.substring(1)
+    document.querySelector("#winnerDisp").innerHTML = text
+  </script>
+</body>
+</html>

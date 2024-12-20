@@ -1,0 +1,50 @@
+img {
+  width: 500px;
+  position: relative;
+  margin: 0; /* Remove excess margins */
+  margin-top: 50px; /* Adjust the top margin to suit your design */
+}
+
+body {
+  height: 100vh;
+  background-color: #3A76C5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 20px; /* Add spacing between elements */
+}
+
+#startBtn h2 {
+  font-family: 'Anton', sans-serif;
+  color: #0F2F76;
+}
+
+
+#startBtn {
+  margin: 0; /* Remove excess margins */
+  max-width: 10vw;
+  background-color: #81D4FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3vmin;
+  position: relative;
+}
+
+a {
+  color: black;
+  font-size: 3vmin;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+#instTitle {
+  font-weight: bold;
+  font-size: 2.5vmin;
+  text-align: center;
+}

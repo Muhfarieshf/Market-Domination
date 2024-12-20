@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Domination</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="gameboard.css">
+</head>
+<body>
+
+  <iframe src="music.html" style="display:none;" id="music-frame"></iframe>
+  
+    <!-- Player 1 Display -->
+    <section id="play1disp">
+      <div id="ply1NameDisp" class="plyTitle">Player 1</div>
+      <div id="ply1NameInput" class="nameInput">
+        <input type="text" id="ply1Input" value="" placeholder="enter name here" maxlength="8" >
+        <button id="ply1SubName">Submit</button>
+      </div>
+      <button id="rollBtn1" class="rollBtns btns">Roll Dice</button>
+      <div class="bankDisp">Money: $<span id="ply1BankDisp">1500</span></div>
+      <div class="totValDisp">Total Value: $<span id="ply1ValDisp">1500</span></div>
+      <div class="handTitle"><span id="nameHandDisp1">Player 1</span>'s hand:</div>
+      <div id="ply1HandDisp" class="handDisp"></div>
+      <section class="btnBar">
+        <button id="p1MortBtn" class="btns">Mortgage</button>
+        <button id="p1UnMortBtn" class="btns">Unmortgage</button>
+        <button id="p1BuyHouseBtn" class="btns">Buy House</button>
+      </section>
+    </section>
+
+    <!-- Game Board -->
+    <section id="gameBoard">
+      <div id="freePark" class="spaces"></div>
+      <section id="topProps" class="propSides tbSides">
+        <div id="s21" class="spaces"></div>
+        <div id="s22" class="spaces"></div>
+        <div id="s23" class="spaces"></div>
+        <div id="s24" class="spaces"></div>
+        <div id="s25" class="spaces railRoad"></div>
+        <div id="s26" class="spaces"></div>
+        <div id="s27" class="spaces"></div>
+        <div id="s28" class="spaces"></div>
+        <div id="s29" class="spaces"></div>
+      </section>
+      <div id="goJail" class="spaces"></div>
+      <section id="leftProps" class="propSides lrSides">
+        <div id="s19" class="spaces"></div>
+        <div id="s18" class="spaces"></div>
+        <div id="s17" class="spaces"></div>
+        <div id="s16" class="spaces"></div>
+        <div id="s15" class="spaces railRoad"></div>
+        <div id="s14" class="spaces"></div>
+        <div id="s13" class="spaces"></div>
+        <div id="s12" class="spaces"></div>
+        <div id="s11" class="spaces"></div>
+      </section>
+      <section id="boardCenter">
+        <div></div>
+        <div id="diceCont">
+          <div id="firstDice"></div>
+          <div id="secDice"></div>
+        </div>
+        <div></div>
+        <div id="noticeCont">
+          <div id="noticeBox">
+            <div id="noticeMessage"></div>
+            <div id="buttons">
+              <button id="yesBtn">Yes</button>
+              <button id="clearCardBtn">Okay</button>
+              <button id="noBtn">No</button>
+            </div>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </section>
+      <section id="rightProps" class="propSides lrSides">
+        <div id="s31" class="spaces"></div>
+        <div id="s32" class="spaces"></div>
+        <div id="s33" class="spaces"></div>
+        <div id="s34" class="spaces"></div>
+        <div id="s35" class="spaces railRoad"></div>
+        <div id="s36" class="spaces"></div>
+        <div id="s37" class="spaces"></div>
+        <div id="s38" class="spaces"></div>
+        <div id="s39" class="spaces"></div>
+      </section>
+      <div id="jail" class="spaces"></div>
+      <section id="botProps" class="propSides tbSides">
+        <div id="s9" class="spaces"></div>
+        <div id="s8" class="spaces"></div>
+        <div id="s7" class="spaces"></div>
+        <div id="s6" class="spaces"></div>
+        <div id="s5" class="spaces railRoad"></div>
+        <div id="s4" class="spaces"></div>
+        <div id="s3" class="spaces"></div>
+        <div id="s2" class="spaces"></div>
+        <div id="s1" class="spaces"></div>
+      </section>
+      <div id="go" class="spaces">
+        <div id="token1" class="token">P1</div>
+        <div id="token2" class="token">P2</div>
+        <div id="token3" class="token">P3</div>
+        <div id="token4" class="token">P4</div>
+      </div>
+    </section>
+
+    <!-- Player 2 Display -->
+    <section id="play2disp">
+      <div id="ply2NameDisp" class="plyTitle">Player 2</div>
+      <div id="ply2NameInput" class="nameInput">
+        <input type="text" id="ply2Input" value="" placeholder="enter name here">
+        <button id="ply2SubName">Submit</button>
+      </div>
+      <button id="rollBtn2" class="rollBtns btns">Roll Dice</button>
+      <div class="bankDisp">Money: $<span id="ply2BankDisp">1500</span></div>
+      <div class="totValDisp">Total Value: $<span id="ply2ValDisp">1500</span></div>
+      <div class="handTitle"><span id="nameHandDisp2">Player 2</span>'s hand:</div>
+      <div id="ply2HandDisp" class="handDisp"></div>
+      <section class="btnBar">
+        <button id="p2MortBtn" class="btns">Mortgage</button>
+        <button id="p2UnMortBtn" class="btns">Unmortgage</button>
+        <button id="p2BuyHouseBtn" class="btns">Buy House</button>
+      </section>
+    </section>
+
+    <!-- Player 3 Display -->
+    <section id="play3disp">
+      <div id="ply3NameDisp" class="plyTitle">Player 3</div>
+      <div id="ply3NameInput" class="nameInput">
+        <input type="text" id="ply3Input" value="" placeholder="enter name here">
+        <button id="ply3SubName">Submit</button>
+      </div>
+      <button id="rollBtn3" class="rollBtns btns">Roll Dice</button>
+      <div class="bankDisp">Money: $<span id="ply3BankDisp">1500</span></div>
+      <div class="totValDisp">Total Value: $<span id="ply3ValDisp">1500</span></div>
+      <div class="handTitle"><span id="nameHandDisp3">Player 3</span>'s hand:</div>
+      <div id="ply3HandDisp" class="handDisp"></div>
+      <section class="btnBar">
+        <button id="p3MortBtn" class="btns">Mortgage</button>
+        <button id="p3UnMortBtn" class="btns">Unmortgage</button>
+        <button id="p3BuyHouseBtn" class="btns">Buy House</button>
+      </section>
+    </section>
+
+    <!-- Player 4 Display -->
+    <section id="play4disp">
+      <div id="ply4NameDisp" class="plyTitle">Player 4</div>
+      <div id="ply4NameInput" class="nameInput">
+        <input type="text" id="ply4Input" value="" placeholder="enter name here">
+        <button id="ply4SubName">Submit</button>
+      </div>
+      <button id="rollBtn4" class="rollBtns btns">Roll Dice</button>
+      <div class="bankDisp">Money: $<span id="ply4BankDisp">1500</span></div>
+      <div class="totValDisp">Total Value: $<span id="ply4ValDisp">1500</span></div>
+      <div class="handTitle"><span id="nameHandDisp4">Player 4</span>'s hand:</div>
+      <div id="ply4HandDisp" class="handDisp"></div>
+      <section class="btnBar">
+        <button id="p4MortBtn" class="btns">Mortgage</button>
+        <button id="p4UnMortBtn" class="btns">Unmortgage</button>
+        <button id="p4BuyHouseBtn" class="btns">Buy House</button>
+      </section>
+      <div id="aCont">
+        <a href="index.html">
+          <h4>Restart Game</h4>
+        </a>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
